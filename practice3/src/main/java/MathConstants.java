@@ -3,7 +3,7 @@ public class MathConstants {
     final double E = 2.71828;
 
     static void calculateCircleArea(double r){
-        double area = Math.PI * r * r;
+        double area = PI * r * r;
         System.out.println(area);
     }
 
