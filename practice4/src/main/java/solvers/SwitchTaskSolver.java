@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class SwitchTaskSolver {
     public static void main(String[] args) {
         // printDayOfTheWeek();
-        // printTicketPriceByDay();
+         printTicketPriceByDay();
         // convertNumberPointIntoLetters();
         // textCommandsProcessing();
-        simpleCalculator();
+        // simpleCalculator();
     }
-
+    static Scanner scanner = new Scanner(System.in);
     public static void printDayOfTheWeek(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number(1-7): ");
         int day = scanner.nextInt();
         String dayName = "";
@@ -24,26 +23,30 @@ public class SwitchTaskSolver {
             case 5 -> dayName = "Friday";
             case 6 -> dayName = "Saturday";
             case 7 -> dayName = "Sunday";
-            default -> System.out.println("The wrong number!");
+            default -> dayName = "The wrong number!";
         }
         System.out.println(dayName);
     }
 
     public static void printTicketPriceByDay(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the day number (1-7): ");
         int dayNumber = scanner.nextInt();
         String ticketPrice = "";
         switch(dayNumber){
-            case 1,2,3,4,5 -> ticketPrice = "$300";
-            case 6,7 -> ticketPrice = "$450";
-            default -> System.out.println("The wrong day number!");
+            case 1,2,3,4,5:
+                ticketPrice = "$300";
+                break;
+            case 6,7:
+                ticketPrice = "$450";
+                break;
+            default:
+                System.out.println("The wrong day number!");
+                return;
         }
         System.out.println("The ticket price is: " + ticketPrice);
     }
 
     public static void convertNumberPointIntoLetters(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number (0-100): ");
         int points = scanner.nextInt();
         String letterGrade = "";
@@ -59,7 +62,6 @@ public class SwitchTaskSolver {
     }
 
     public static void textCommandsProcessing(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the command: ");
         String command = scanner.nextLine();
         String message = "";
@@ -74,7 +76,6 @@ public class SwitchTaskSolver {
     }
 
     public static void simpleCalculator(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a first number: ");
         int number1 = scanner.nextInt();
         System.out.print("Enter a second number: ");
@@ -93,7 +94,7 @@ public class SwitchTaskSolver {
                 System.out.println("The multiplying result is: " + (number1 * number2));
                 break;
             case "/":
-                if(number2 > 0) System.out.println("The dividing result is: " + ((double)number1 / (double)number2));
+                if(number2 != 0) System.out.println("The dividing result is: " + ((double)number1 / (double)number2));
                 else System.out.println("Can't divide by 0");
                 break;
             default:

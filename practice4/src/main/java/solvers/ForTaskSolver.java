@@ -4,16 +4,15 @@ import java.util.Scanner;
 
 public class ForTaskSolver {
     public static void main(String[] args) {
-        // printNumbersDividedBy3();
+        // printNumbersDivisibleBy3();
         // sumOfNumbers();
         // multiplicationTable();
-        // checkNumberIsPrime();
-        // checkNumberIsPrime();
-        printNumber1to10();
+         checkNumberIsPrime();
+        // printNumber1to10();
 
     }
-
-    public static void printNumbersDividedBy3(){
+    static Scanner scanner = new Scanner(System.in);
+    public static void printNumbersDivisibleBy3(){
         for (int i = 1; i <= 100; i++ ){
             if(i % 3 == 0){
                 System.out.println(i);
@@ -22,7 +21,6 @@ public class ForTaskSolver {
     }
 
     public static void sumOfNumbers(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         int sum = 0;
@@ -33,7 +31,6 @@ public class ForTaskSolver {
     }
 
     public static void multiplicationTable(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number (1-10): ");
         int number = scanner.nextInt();
         for (int i = 1; i <= 10; i++){
@@ -42,16 +39,15 @@ public class ForTaskSolver {
     }
 
     public static void checkNumberIsPrime(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a number to check: ");
+        System.out.print("Enter a number to check (2+): ");
         int number = scanner.nextInt();
         boolean isPrime = true;
-
-        for (int i = 2; i <= number - 1; i++){
-            if (number % i == 0){
-                isPrime = false;
-                break;
-            }
+        if (number < 2) return ;
+        for (int i = 2; i * i <= number; i++){
+                if (number % i == 0){
+                    isPrime = false;
+                    break;
+                }
         }
         System.out.printf("The number is Prime: %s%n", isPrime);
     }

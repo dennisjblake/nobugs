@@ -12,9 +12,8 @@ public class IfElseTaskSolver {
         checkTheResultByPoints();
 
     }
-
+    static Scanner scanner = new Scanner(System.in);
     public static void checkTheNumberType(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
 
@@ -24,7 +23,6 @@ public class IfElseTaskSolver {
     }
 
     public static void findTheBiggestNumberOfTwo(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a first number: ");
         int number1 = scanner.nextInt();
         System.out.print("Enter a second number: ");
@@ -35,7 +33,6 @@ public class IfElseTaskSolver {
     }
 
     public static void showTheGrade(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number (1 -5): ");
         int number = scanner.nextInt();
         if(number == 5) System.out.println(Grade.BEST);
@@ -45,7 +42,6 @@ public class IfElseTaskSolver {
     }
 
     public static void checkParity(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         boolean result = number % 2 == 0;
@@ -53,7 +49,6 @@ public class IfElseTaskSolver {
     }
 
     public static void checkDiscountValueByAge(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter an age: ");
         int age = scanner.nextInt();
         int discount = 0;
@@ -63,7 +58,6 @@ public class IfElseTaskSolver {
     }
 
     public static void checkTheResultByPoints(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter points (0-100): ");
         int points = scanner.nextInt();
         String result = String.valueOf(Grade.BAD);

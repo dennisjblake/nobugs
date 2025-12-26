@@ -5,16 +5,15 @@ import java.util.Scanner;
 public class BreakContinueTaskSolver {
     public static void main(String[] args) {
         // sumNumbersBeforeNegativeNumber();
-        // skippNumberDividedBy3();
+        // skippNumberDivisibleBy3();
         // checkPositiveNumberInput();
         checkTheCommand();
 
     }
-
+    static Scanner scanner = new Scanner(System.in);
     public static void sumNumbersBeforeNegativeNumber(){
         int sum = 0;
         while (true){
-            Scanner scanner = new Scanner(System.in);
             System.out.print("Enter the number: ");
             int number = scanner.nextInt();
             if (number < 0) break;
@@ -22,7 +21,7 @@ public class BreakContinueTaskSolver {
         }
         System.out.printf("The sum is: %d%n",sum);
     }
-    public static void skippNumberDividedBy3(){
+    public static void skippNumberDivisibleBy3(){
         for (int i = 1; i <= 20; i++){
             if(i % 3 == 0){
              continue;
@@ -32,7 +31,6 @@ public class BreakContinueTaskSolver {
     }
 
     public static void checkPositiveNumberInput(){
-        Scanner scanner = new Scanner(System.in);
         while (true){
             System.out.print("Enter a number: ");
             int number = scanner.nextInt();
@@ -43,7 +41,6 @@ public class BreakContinueTaskSolver {
     }
 
     public static void checkTheCommand(){
-        Scanner scanner = new Scanner(System.in);
         while (true){
             System.out.print("Enter the command: ");
             String command = scanner.next();

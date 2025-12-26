@@ -8,9 +8,8 @@ public class WhileTaskSolver {
         // printEvenNumbers();
         printCountdown();
     }
-
+    static Scanner scanner = new Scanner(System.in);
     public static void countFactorial(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         int result = 1;
@@ -23,7 +22,6 @@ public class WhileTaskSolver {
     }
 
     public static void printEvenNumbers(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         int i = 1;
@@ -36,7 +34,6 @@ public class WhileTaskSolver {
     }
 
     public static void printCountdown(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Input a number (1+): ");
         int number = scanner.nextInt();
         while (number >= 1){

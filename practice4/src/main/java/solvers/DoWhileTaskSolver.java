@@ -11,9 +11,8 @@ public class DoWhileTaskSolver {
         countDigitsInNumber();
 
     }
-
+    static Scanner scanner = new Scanner(System.in);
     public static void askForPositiveNumber(){
-        Scanner scanner = new Scanner(System.in);
         int number;
         do{
             System.out.print("Enter a number: ");
@@ -23,7 +22,6 @@ public class DoWhileTaskSolver {
     }
 
     public static void checkPassword(){
-        Scanner scanner = new Scanner(System.in);
         String enteredPassword = "";
         do {
             System.out.print("Enter a password: ");
@@ -41,7 +39,6 @@ public class DoWhileTaskSolver {
     }
 
     public static void waitForExitCommand(){
-        Scanner scanner = new Scanner(System.in);
         String command;
         do {
             System.out.print("Enter you command: ");
@@ -51,7 +48,6 @@ public class DoWhileTaskSolver {
     }
 
     public static void countDigitsInNumber(){
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int number = scanner.nextInt();
         int count = 0;
